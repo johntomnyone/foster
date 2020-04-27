@@ -90,3 +90,83 @@ ul li {
     width: 80%;
   }
 }
+
+
+.coyTxt1 {
+    font-size: 5em;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+}
+@media screen and (max-width: 1700px) {
+  .coyTxt1 {
+    font-size: 5em;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .coyTxt1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .coyTxt1 {
+    font-size: 1.5em;
+  }
+}
+
+
+.coyTxt2 {
+    font-size: 5em;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    margin-bottom: 80px;
+}
+@media screen and (max-width: 1700px) {
+  .coyTxt2 {
+    font-size: 5em;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .coyTxt2 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .coyTxt2 {
+    font-size: 1.5em;
+  }
+}
+
+
+#bgimgId {
+    height: 900px;
+}
+@media screen and (max-width: 1700px) {
+  #bgimgId {
+    height: 900px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #bgimgId {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #bgimgId {
+    height: 400px;
+  }
+}

@@ -3,7 +3,7 @@
 
 {% block content %}
       
-      <div class="jumbotron jumbotron-fluid" style="background-image: url({% static 'img/oil-rig-514035_1920.jpg' %}); background-size: cover; height: 400px">
+      <div class="jumbotron jumbotron-fluid mb-5" style="background-image: url({% static 'img/oil-rig-514035_1920.jpg' %}); background-size: cover;" id="bgimgId">
           <div class="text-center mt-5">
             {% if user.is_authenticated %}
                 <h2 class="text-light font-weight-bold">Hello {{ user.username }}</h2>
@@ -12,8 +12,8 @@
             {% endif %}
           </div>
           <div class="text-center mt-5">
-            <span class="display-4 font-weight-bold text-light bg-danger">Foster Petroleum</span><br><br>
-            <span class="display-4 font-weight-bold text-light bground-success">Development Company Limited</span>
+            <span class="coyTxt1">Foster Petroleum</span><br><br>
+            <span class="coyTxt2">Development Company Limited</span>
           </div>
       </div>
       <div class="container">
