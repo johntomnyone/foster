@@ -1,0 +1,91 @@
+{% extends 'fosterapp/base.html' %}
+{% load static %}
+
+{% block content %}
+      
+      <div class="jumbotron jumbotron-fluid" style="background-image: url({% static 'img/oil-rig-514035_1920.jpg' %}); background-size: cover; height: 400px">
+          <div class="text-center mt-5">
+            {% if user.is_authenticated %}
+                <h2 class="text-light font-weight-bold">Hello {{ user.username }}</h2>
+            {% else %}
+                <h2 class="text-light"></h2>
+            {% endif %}
+          </div>
+          <div class="text-center mt-5">
+            <span class="display-4 font-weight-bold text-light bg-danger">Foster Petroleum</span><br><br>
+            <span class="display-4 font-weight-bold text-light bground-success">Development Company Limited</span>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg col-md bg-light mr-3">
+                <img src="{% static 'img/foster_oil_xploration.png' %}" class="mr-0 p-0" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Oil &amp; Gas Exploration</h4>
+                <p class="text-justify">
+                    The role of exploration is to provide the information required to exploit the best opportunities presented in the choice of areas, and to manage research operations on the acquired blocks.
+                </p>
+            </div>
+            <div class="col-lg col-md bg-light mr-3">
+                <img src="{% static 'img/foster_production.png' %}" class="img-responsive" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Production</h4>
+                <p class="text-justify">
+                    The oil and gas sector is facing a number of sector-internal challenges, including shortage of skilled workers, accessing oil and gas reserves in geographically remote areas, promoting occupational safety and health standards, and respect for the fundamental principles and rights at work.
+                </p>
+            </div>
+            <div class="col-lg col-md bg-light">
+                <img src="{% static 'img/foster_oil_refining.jpg' %}" class="" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Refining</h4>
+                <p class="text-justify">
+                    We stand to give advice and ubiquitous solutions to our clients, by prescribing, procuring, installing and managing our clients' oil, gas and petrochemical products.
+                </p>
+            </div>
+        </div>
+      </div>
+      
+      <!-- About US Section -->
+      <div class="jumbotron jumbotron-fluid bground-success mt-5">
+          <div class="text-center container">
+            <h2 class="text-light text-uppercase">About Us</h2>
+            <p class="text-light text-justify" id="aboutUs">
+                Foster Petroleum Development Limited was incorporated in 2019 as an indigenous petroleum development company with a reputation of and  gas exploration and production activities, refining, commercialization and transportation of petrochemical products Anchored on an experienced and hard-working professional team with advent technology and harmonious community relations, we strive to achieve the desired goals and stand tall in the oil and gas industry.
+                Foster is safety conscious and adhered to quality health safety and environment duty, standardising all  into operations
+                We aspire to be the pacesetters for corporate social responsibility in Nigeria, hence, our initiative of giving back more than what we take to attract and retains the goodwill of our host communities will intentionally mitigate social roles and optimise production which is the hallmark of any oil and Gas business
+            </p>
+          </div>
+      </div>
+      
+      <!-- Contact info starts here -->
+      <div class="container">
+          <div class="row">
+            <div class="col-lg col-md border border-light rounded mr-3 p-3 bg-light">
+              <div class="text-center">
+                <img src="{% static 'img/call-24px.svg' %}" alt="foster_call" class="p-3">
+                  <h3 class="text-danger">CALL US NOW!</h3>
+                    <p>(234)-803-0856-544</p>
+                    <span class="font-weight-bold">We'll be happy to answer any questions.</span>
+              </div>
+            </div>
+            <div class="col-lg col-md border border-light rounded mr-3 p-3 bg-light">
+              <div class="text-center">
+                <img src="{% static 'img/schedule-24px.svg' %}" alt="foster_call" class="p-3">
+                <h3 class="text-danger">HOURS OF OPERATION</h3>
+                <p>
+                    Monday: Friday 7:30 am - 18:30 pm
+                    Saturday: 11:30 am - 17:00 pm
+                  </p>
+              </div>
+            </div>
+            <div class="col-lg col-md border border-light rounded p-3 bg-light">
+              <div class="text-center">
+                <img src="{% static 'img/location_on-24px.svg' %}" alt="foster_call" class="p-3">
+                <h3 class="text-danger">LOCATION</h3>
+                <p>
+                    #5 Enwuchukwa Close, off Geodetic Road, Beside Shell IA, Rumuobiakani, Port Harcourt
+                    Rivers State, Nigeria
+                  </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+{% endblock %}

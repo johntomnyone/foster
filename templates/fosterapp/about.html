@@ -1,0 +1,34 @@
+{% extends 'fosterapp/base.html' %}
+{% load static %}
+
+{% block content %}
+      
+      
+      <div class="jumbotron jumbotron-fluid" style="background-image: url({% static 'img/factory-2254981_1920.jpg' %}); background-size: cover; height: 400px">
+          <div class="text-center mt-5">
+            <span class="display-4 font-weight-bold text-light bg-danger">About Us</span>
+          </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+            <div class="col-lg col-md bg-light">
+                <p class="text-justify p-3" id="aboutText">
+                    Foster Oil &amp; Gas Limited was incorporated in 2016 as an indigenous petroleum development company with a reputation of and  gas exploration and production activities, refining, commercialization and transportation of petrochemical products
+                    Anchored on an experienced and hard-working professional team with advent technology and harmonious community relations, we strive to achieve the desired goals and stand tall in the oil and gas industry.
+                </p>
+                <p id="aboutText">
+                    Foster is safety conscious and adhered to quality health safety and environment duty, standardising all  into operations
+                </p>
+                <p id="aboutText">
+                    We aspire to be the pacesetters for corporate social responsibility in Nigeria, hence, our initiative of giving back more than what we take to attract and retains the goodwill of our host communities will intentionally mitigate social roles and optimise production which is the hallmark of any oil and Gas business
+                </p>
+            </div>
+            <div class="col-lg col-md bg-light pr-0">
+                <img src="{% static 'img/chad-peltola-d1lHAcrJ1v0-unsplash.jpg' %}" class="img-responsive" style="width: 100%;">
+            </div>
+          </div>
+      </div>
+      
+      
+{% endblock %}

@@ -1,0 +1,97 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="icon" type="favicon" href="{% static 'img/fosteroilgas_d200.svg' %}">
+      
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+      
+    <!--Link to enternal stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <title>Foster Petroleum Development Company Ltd.</title>
+  </head>
+  <body>
+    <!-- Navigation manu starts here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="{% static 'img/fosteroilgas_new.svg' %}" class="imgId" alt="fosterpetroleum_logo" onclick="Redir();">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'services' %}">Oil &amp; Gas</a>
+              <a class="dropdown-item" href="{% url 'services' %}">Refining</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'services' %}">Products</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'fosterapp:register' %}">Register</a></li>     
+          {# Some logic on what to display for last item#}
+          {% if user.is_authenticated %}
+            <li class="nav-item"><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'fosterapp:user_login' %}">Login</a></li>
+          {% endif %}
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+      </nav>
+    <!-- Navigation manu ends here -->
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+ <!-- Footer starts here -->
+      <footer class="container-fluid bground-success  mt-5">
+        <div class="p-3">
+            <p class="text-center text-light">Copyright &copy; <script>var timeNow = new Date().getFullYear(); document.write(timeNow);</script>  - All rights reserved</p>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      <!--
+      function Redir() {
+        window.location = "{% url 'index' %}";
+      }
+      //-->
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

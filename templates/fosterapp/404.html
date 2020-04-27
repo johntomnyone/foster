@@ -1,0 +1,10 @@
+{% extends 'bakerapp/base.html' %}
+{% load static %}
+{% block content %}
+	<h1>Page not found: 404</h1>
+	<p>The page you are looking for cannot be found</p>
+	<p>
+	<button class="btn btn-danger"><a href="{% url 'index' %}">Go back to Home page</a></button>
+	</p>
+
+{% endblock %}

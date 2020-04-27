@@ -1,0 +1,92 @@
+body {
+    background-image: url(/img/bg-img.svg);
+    background-size: cover;
+    background-color: rgb(255,255,255);
+}
+
+span {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.bground-success {
+    background-color: #0E4C00;
+}
+
+/*
+p {
+    display: inline;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
+}*/
+
+
+p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3em;
+    word-break: break-all;
+}
+
+#aboutText {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1em;
+    word-break: break-all;
+}
+
+ul li {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5em;
+}
+
+#aboutUs {
+    border: 1px solid rgb(255,255,255);
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.contactClassH {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5em;
+}
+
+.contactClass {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.0em;
+    padding: 5px 5px;
+}
+
+.imgId {
+    cursor: pointer;
+}
+
+.imgId {
+  width: 40%
+  height: auto;
+}
+@media screen and (max-width: 1700px) {
+  .imgId {
+    width: 40%;
+    padding-right: 50px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .imgId {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .imgId {
+    width: 80%;
+  }
+}

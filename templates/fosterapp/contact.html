@@ -1,0 +1,64 @@
+{% extends 'fosterapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+      
+      <div class="jumbotron jumbotron-fluid" style="background-image: url({% static 'img/factory-2254981_1920.jpg' %}); background-size: cover; height: 400px">
+          <div class="text-center mt-5">
+            <span class="display-4 font-weight-bold text-light bg-danger">Contact Us</span>
+          </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+            <div class="col-lg col-md bg-light">
+                <h3>GET IN TOUCH WITH US!</h3>
+                YOUR EMAIL ADDRESS WILL NOT BE PUBLISHED.
+               <form method="post" action="{% url 'contact' %}">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="example@hostname.com">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFullName">Full Name</label>
+                    <input type="text" class="form-control" id="exampleInputFullName" name="fullName">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputCompanyName">Company Name</label>
+                    <input type="text" class="form-control" id="exampleInputCompanyName" name="coyName">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputCompanyName">Type your messages here</label>
+                    <textarea type="textarea" rows="4" class="form-control" id="exampleInputCompanyName" name="messegeArea"></textarea>
+                  </div>
+            
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-lg col-md bg-light pr-0">
+                <h3 class="contactClassH">CONTACT INFORMATION</h3>
+                <p class="contactClass">
+                CALL US AT ANY TIME!<br>
+                Address:<br>
+
+                #5 Enwuchukwa Close, off Geodetic Road,<br> Beside Shell IA, Rumuobiakani,<br> Port Harcourt
+                Rivers State, Nigeria<br>
+
+                Telephone:<br>
+                (234) 803-0856-544<br>
+
+                Fax:<br>
+                (234) 701-5858-088<br>
+
+                Email Us:<br>
+                info@fosterlimited.com
+              </p>
+            </div>
+          </div>
+      </div>
+      
+      
+{% endblock %}

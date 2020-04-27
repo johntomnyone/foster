@@ -1,0 +1,61 @@
+{% extends 'fosterapp/base.html' %}
+{% load static %}
+
+{% block content %}
+      
+      <div class="jumbotron jumbotron-fluid" style="background-image: url(img/factory-2254981_1920.jpg); background-size: cover; height: 400px">
+          <div class="text-center mt-5">
+            <span class="display-4 font-weight-bold text-light bg-danger">Our Services</span>
+          </div>
+      </div>
+      
+      <div class="container">
+        <div class="row mb-3">
+            <div class="col-lg col-md bg-light mr-3">
+                <img src="{% static 'img/foster_oil_xploration.png' %}" class="mr-0 p-0" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Oil &amp; Gas Exploration</h4>
+                <p class="text-justify">
+                    The role of exploration is to provide the information required to exploit the best opportunities presented in the choice of areas, and to manage research operations on the acquired blocks.
+                </p>
+            </div>
+            <div class="col-lg col-md bg-light mr-3">
+                <img src="{% static 'img/foster_production.png' %}" class="img-responsive" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Production</h4>
+                <p class="text-justify">
+                    The oil and gas sector is facing a number of sector-internal challenges, including shortage of skilled workers, accessing oil and gas reserves in geographically remote areas, promoting occupational safety and health standards, and respect for the fundamental principles and rights at work.
+                </p>
+            </div>
+            <div class="col-lg col-md bg-light">
+                <img src="{% static 'img/foster_oil_refining.jpg' %}" class="" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Refining</h4>
+                <p class="text-justify">
+                    We stand to give advice and ubiquitous solutions to our clients, by prescribing, procuring, installing and managing our clients' oil, gas and petrochemical products.
+                </p>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-lg col-md bg-light mr-3">
+                <img src="{% static 'img/foster_commercialization.svg' %}" class="mr-0 p-0" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Commercialization</h4>
+                <p class="text-justify">
+                    The role of exploration is to provide the information required to exploit the best opportunities presented in the choice of areas, and to manage research operations on the acquired blocks.
+                </p>
+            </div>
+            <div class="col-lg col-md bg-light mr-3">
+                <img src="{% static 'img/foster_transportation.svg' %}" class="img-responsive" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Transportaion</h4>
+                <p class="text-justify">
+                    The oil and gas sector is facing a number of sector-internal challenges, including shortage of skilled workers, accessing oil and gas reserves in geographically remote areas, promoting occupational safety and health standards, and respect for the fundamental principles and rights at work.
+                </p>
+            </div>
+            <div class="col-lg col-md bg-light">
+                <img src="{% static 'img/industry-3279601_640.jpg' %}" class="" style="width: 100%;">
+                <h4 class="text-center p-3 text-danger">Procurement</h4>
+                <p class="text-justify">
+                    We stand to give advice and ubiquitous solutions to our clients, by prescribing, procuring, installing and managing our clients' oil, gas and petrochemical products.
+                </p>
+            </div>
+        </div>
+      </div>
+      
+{% endblock %}
