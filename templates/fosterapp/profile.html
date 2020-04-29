@@ -1,0 +1,32 @@
+{% extends 'fosterapp/base.html' %}
+{% load static %}
+
+{% block content %}
+	<div class="jumbotron" style="margin-top: 120px;">
+		{% load avatar_tags %}
+		{% if user.is_authenticated %}
+			<h1 class="text-center text-uppercase mb-5">Dear {{ user.first_name }}, below is your Profile Details</h1>
+			<table class="table">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">First Name</th>
+			      <th scope="col">Last Name</th>
+			      <th scope="col">Username</th>
+			      <th scope="col">Email Address</th>
+			      <th scope="col">Profile Picture</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>{{ user.first_name }}</td>
+			      <td>{{ user.last_name }}</td>
+			      <td>{{ user.username }}</td>
+			      <td>{{ user.email }}</td>
+			      <td>{% avatar user 50 class="rounded-circle" id="user_avatar" %} <a href="{% url 'avatar_change' %}">Change your avatar</a></td>
+			    </tr>
+			  </tbody>
+			</table>
+		{% endif %}
+	</div>
+
+{% endblock %}

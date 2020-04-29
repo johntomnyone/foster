@@ -41,6 +41,11 @@ p {
 ul li {
     font-family: 'Comic Neue', cursive;
     font-size: 1.4em;
+    color: #fff;
+}
+
+ul li a{
+    color: #fff;
 }
 
 #aboutUs {
@@ -168,4 +173,8 @@ ul li {
   #bgimgId {
     height: 400px;
   }
+}
+
+#error_1_id_username {
+  color: red;
 }

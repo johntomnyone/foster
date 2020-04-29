@@ -1,8 +1,9 @@
 {% extends 'fosterapp/base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron" style="margin-top: 120px;">
       <h1>Login here :</h1>
 <form method="post" action="{% url 'fosterapp:user_login' %}">
           {% csrf_token %}

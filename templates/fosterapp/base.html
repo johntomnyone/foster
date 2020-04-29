@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- Navigation manu starts here -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <img src="{% static 'img/fosteroilgas_new.svg' %}" class="imgId" alt="fosterpetroleum_logo" onclick="Redir();">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -54,8 +54,10 @@
           <ul class="navbar-nav ml-auto">
           </li>     
           {# Some logic on what to display for last item#}
+          {% load avatar_tags %}
           {% if user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link text-capitalize text-success" href=".">{{ user.username }}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">{% avatar user 40 class="rounded-circle img-responsive" id="user_avatar" %}</a></li>
+            <li class="nav-item"><a class="nav-link text-capitalize text-success font-weight-bold rounded-pill" href="{% url 'profile' %}">{{ user.username }}</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
             <li class="nav-item"><a class="nav-link text-danger" href="https://emailmg.ipage.com/roundcube/" target="_blank">Webmail</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
@@ -79,7 +81,7 @@
 
 
  <!-- Footer starts here -->
-      <footer class="container-fluid bground-success  mt-5">
+      <footer class="container-fluid bground-success" style="margin-top: 200px;">
         <div class="p-3">
             <p class="text-center text-light">Copyright &copy; <script>var timeNow = new Date().getFullYear(); document.write(timeNow);</script>  - All rights reserved</p>
         </div>

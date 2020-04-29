@@ -78,3 +78,7 @@ def contact(request):
 
 def services(request):
 	return render(request, 'fosterapp/services.html', {})
+
+@login_required
+def profile(request):
+    return render(request, 'fosterapp/profile.html')
