@@ -8,7 +8,7 @@
             {% if user.is_authenticated %}
                 <h2 class="text-light font-weight-bold">Hello {{ user.username }}</h2>
             {% else %}
-                <h2 class="text-light"></h2>
+                    <h2 class="text-center text-light" style="padding-top: -20px;"><i class="bg-danger">{{ myMessage }}</i></h2>
             {% endif %}
           </div>
           <div class="text-center mt-5">

@@ -55,9 +55,11 @@ def user_login(request):
             else:
                 return HttpResponse("Your account was inactive.")
         else:
+            myMessage = 'You have enterred a wrong login details'
             print("Someone tried to login and failed.")
             print("They used username: {} and password: {}".format(username,password))
-            return HttpResponse("Invalid login details given")
+            return render(request, 'fosterapp/index.html', {'myMessage': myMessage})
+            # return HttpResponse("Invalid login details given")
     else:
         return render(request, 'fosterapp/login.html', {})
 
