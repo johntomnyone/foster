@@ -6,7 +6,7 @@
       <div class="jumbotron jumbotron-fluid mb-5" style="background-image: url({% static 'img/oil-rig-514035_1920.jpg' %}); background-size: cover;" id="bgimgId">
           <div class="text-center mt-5">
             {% if user.is_authenticated %}
-                <h2 class="text-light font-weight-bold">Hello {{ user.username }}</h2>
+                <h2 class="text-light font-weight-bold"></h2>
             {% else %}
                     <h2 class="text-center text-light" style="padding-top: -20px;"><i class="bg-danger">{{ myMessage }}</i></h2>
             {% endif %}

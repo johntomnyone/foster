@@ -54,7 +54,9 @@
           </li>     
           {# Some logic on what to display for last item#}
           {% if user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link text-capitalize text-success" href=".">{{ user.username }}</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+            <li class="nav-item"><a class="nav-link text-danger" href="https://emailmg.ipage.com/roundcube/">Webmail</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
           {% else %}
             <li class="nav-item"><a class="nav-link" href="{% url 'fosterapp:register' %}">Register</a>
