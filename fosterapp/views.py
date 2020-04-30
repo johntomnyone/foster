@@ -82,3 +82,7 @@ def services(request):
 @login_required
 def profile(request):
     return render(request, 'fosterapp/profile.html')
+
+
+def carousel(request):
+    return render(request, 'fosterapp/carousel.html', {})

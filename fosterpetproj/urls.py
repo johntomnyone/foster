@@ -16,6 +16,7 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^services/$', views.services, name='services'),
     url(r'^profile/$', views.profile, name='profile'),
+    url(r'^carousel/$', views.carousel, name='carousel'),
     url('avatar/', include('avatar.urls')),
 ]
 
